@@ -7,20 +7,12 @@ trigger:
 - development
 
 pool:
-  name: MyAgentPool
+  name: TestPool1
   demands:
    -  mvn
   
  
 steps:
-
-  - task: SonarQubePrepare@7
-    inputs:
-     SonarQube: 'Sonar1'
-     scannerMode: 'other'
-     
-
-
   - task: Maven@4
     inputs:
       mavenPomFile: 'pom.xml'
